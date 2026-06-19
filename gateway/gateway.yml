@@ -1,0 +1,60 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: profertility-gateway
+  namespace: profertility
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  gatewayClassName: nginx
+  listeners:
+    - name: http
+      port: 80
+      protocol: HTTP
+      allowedRoutes:
+        namespaces:
+          from: All
+    - name: https-root
+      port: 443
+      protocol: HTTPS
+      hostname: "mojasim.tech"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - name: profertility-tls-cert
+      allowedRoutes:
+        namespaces:
+          from: All
+    - name: https-backend
+      port: 443
+      protocol: HTTPS
+      hostname: "api.mojasim.tech"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - name: profertility-tls-cert
+      allowedRoutes:
+        namespaces:
+          from: All
+    - name: https-admin
+      port: 443
+      protocol: HTTPS
+      hostname: "admin.mojasim.tech"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - name: profertility-tls-cert
+      allowedRoutes:
+        namespaces:
+          from: All
+    - name: https-plus
+      port: 443
+      protocol: HTTPS
+      hostname: "plus.mojasim.tech"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - name: profertility-tls-cert
+      allowedRoutes:
+        namespaces:
+          from: All

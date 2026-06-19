@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profertility-admin
+  namespace: profertility
+  labels:
+    app: profertility-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: profertility-admin
+  template:
+    metadata:
+      labels:
+        app: profertility-admin
+    spec:
+      containers:
+        - name: profertility-admin
+          image: mojasim/profertility-admin:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - secretRef:
+                name: admin-secret

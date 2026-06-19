@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profertility-backend
+  namespace: profertility
+  labels:
+    app: profertility-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: profertility-backend
+  template:
+    metadata:
+      labels:
+        app: profertility-backend
+    spec:
+      containers:
+        - name: profertility-backend
+          image: mojasim/profertility-backend:latest
+          ports:
+            - containerPort: 7005
+          envFrom:
+            - secretRef:
+                name: backend-secret

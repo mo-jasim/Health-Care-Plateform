@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profertility-plus
+  namespace: profertility
+  labels:
+    app: profertility-plus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: profertility-plus
+  template:
+    metadata:
+      labels:
+        app: profertility-plus
+    spec:
+      containers:
+        - name: profertility-plus
+          image: mojasim/profertility-plus:latest
+          ports:
+            - containerPort: 3000
+          envFrom:
+            - secretRef:
+                name: plus-secret

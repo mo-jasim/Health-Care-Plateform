@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: profertility-client
+  namespace: profertility
+spec:
+  selector:
+    app: profertility-client
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
