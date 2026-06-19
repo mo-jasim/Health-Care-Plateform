@@ -8,5 +8,5 @@ spec:
     app: profertility-admin
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 4173
+      targetPort: 4173

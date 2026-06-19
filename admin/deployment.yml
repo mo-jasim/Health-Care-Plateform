@@ -19,7 +19,7 @@ spec:
         - name: profertility-admin
           image: mojasim/profertility-admin:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 4173
           envFrom:
             - secretRef:
                 name: admin-secret

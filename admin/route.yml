@@ -15,4 +15,4 @@ spec:
             value: /
       backendRefs:
         - name: profertility-admin
-          port: 8080
+          port: 4173
