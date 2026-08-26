@@ -1,6 +1,19 @@
+# Terraform
 .terraform/
 *.tfstate
 *.tfstate.backup
 tfplan
 .terraform.lock.hcl
 .terraform.tfstate.lock.info
+*.tfvars
+!*.tfvars.example
+
+# Kubernetes Secrets and Local Envs
+*secrets.yml
+secrets.yml
+!*secrets.yml.example
+!secrets.yml.example
+*.env
+*.env*
+.env
+.env.*
