@@ -8,7 +8,7 @@ A production-grade, microservices-based digital health and fertility consultatio
 
 <div align="center">
 
-![Architecture Diagram](https://cdn.mojasim.com/profertility-architecture.png)
+![Architecture Diagram](https://cdn.mojasim.com/1787731565072-Profertility-Diagram.png)
 
 *End-to-end cloud infrastructure, Gateway API routing, and microservices communication topology on AWS EKS*
 
@@ -30,7 +30,7 @@ A production-grade, microservices-based digital health and fertility consultatio
 
 | Customer Web Portal | Clinic Admin Dashboard | Profertility Plus Portal |
 | :---: | :---: | :---: |
-| ![Patient Web Portal](https://cdn.mojasim.com/profertility-client.png) | ![Admin Dashboard](https://cdn.mojasim.com/profertility-admin.png) | ![Profertility Plus Portal](https://cdn.mojasim.com/profertility-plus.png) |
+| ![Patient Web Portal](https://cdn.mojasim.com/Profertility.png) | ![Admin Dashboard](https://cdn.mojasim.com/1776674021386-Profertility-User-Dashboard.png) | ![Profertility Plus Portal](https://cdn.mojasim.com/ProfertilityPlus.png) |
 | **Next.js Patient Portal**<br>Fertility assessments, appointment booking, telehealth calls, and care journeys | **React & Vite Admin Dashboard**<br>Specialist scheduling, patient records, timetable management, and analytics | **Next.js Plus Program Portal**<br>Specialized IVF protocols, curated wellness plans, and waitlist onboarding |
 
 ---
